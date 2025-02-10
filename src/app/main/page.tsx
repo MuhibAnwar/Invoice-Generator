@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import InventoryForm from '../../components/InventoryForm';
+
 import InvoiceForm from '../../components/InvoiceForm';
 
 interface InventoryItem {

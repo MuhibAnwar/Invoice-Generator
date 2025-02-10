@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-import InvoiceForm from '../../components/InvoiceForm';
+
 
 interface InventoryItem {
   name: string;
@@ -20,7 +20,7 @@ interface Invoice {
 }
 
 export default function Home() {
-  const [inventory, setInventory] = useState<InventoryItem[]>([]);
+ // const [inventory, setInventory] = useState<InventoryItem[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
   const [expandedInvoice, setExpandedInvoice] = useState<string | null>(null);
 

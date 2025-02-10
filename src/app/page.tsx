@@ -1,7 +1,7 @@
-import Page from "@/app/main/page";
+
 import React from "react";
 import AUTH from "./auth/page";
-import InvoiceForm from "@/components/InvoiceForm";
+
 
 export default function Home() {
  
