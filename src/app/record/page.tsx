@@ -31,7 +31,7 @@ export default function Home() {
     }
   }, []);
 
-  const generateInvoiceNumber = () => {
+  {/*const generateInvoiceNumber = () => {
     const now = new Date();
     const month = String(now.getMonth() + 1).padStart(2, '0');
     const year = now.getFullYear();
@@ -42,17 +42,9 @@ export default function Home() {
       .pop();
     const nextNumber = lastInvoice ? parseInt(lastInvoice.number.split('/')[2]) + 1 : 1;
     return `${prefix}/${String(nextNumber).padStart(2, '0')}`;
-  };
+  
 
-  const handleCreateInvoice = (invoiceItems: InventoryItem[]) => {
-    const newInvoice: Invoice = {
-      number: generateInvoiceNumber(),
-      items: invoiceItems,
-    };
-    const updatedInvoices = [...invoices, newInvoice];
-    setInvoices(updatedInvoices);
-    localStorage.setItem('invoices', JSON.stringify(updatedInvoices));
-  };
+  }*/}
 
   const toggleInvoiceDetails = (invoiceNumber: string) => {
     setExpandedInvoice(expandedInvoice === invoiceNumber ? null : invoiceNumber);

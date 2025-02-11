@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import InventoryForm from './InventoryForm';
+import Image from 'next/image';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
@@ -141,7 +142,7 @@ export default function InvoiceForm({ onCreateInvoice }: InvoiceFormProps) {
         >
           {/* Header */}
           <div className="flex items-center justify-between mb-6 border-black " >
-            <img src="/logo-1.png" alt="Brand Logo" className="w-20 h-20" />
+            <Image src="/logo-1.png" alt="Brand Logo" className="w-20 h-20" />
             <div className="text-center flex-grow">
               <h1 className="text-2xl font-bold"id='header' >EXPRESS TRADERS</h1>
               <br/>

@@ -20,9 +20,9 @@ interface Invoice {
 }
 
 export default function Home() {
-  const [inventory, setInventory] = useState<InventoryItem[]>([]);
+ // const [inventory, setInventory] = useState<InventoryItem[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
-  const [expandedInvoice, setExpandedInvoice] = useState<string | null>(null);
+ // const [expandedInvoice, setExpandedInvoice] = useState<string | null>(null);
 
   useEffect(() => {
     const storedInvoices = localStorage.getItem('invoices');
@@ -54,22 +54,16 @@ export default function Home() {
     localStorage.setItem('invoices', JSON.stringify(updatedInvoices));
   };
 
-  const toggleInvoiceDetails = (invoiceNumber: string) => {
-    setExpandedInvoice(expandedInvoice === invoiceNumber ? null : invoiceNumber);
-  };
+                
 
-  const handleRemoveInvoice = (invoiceNumber: string) => {
-    const updatedInvoices = invoices.filter((invoice) => invoice.number !== invoiceNumber);
-    setInvoices(updatedInvoices);
-    localStorage.setItem('invoices', JSON.stringify(updatedInvoices));
-  };
+ 
 
   return (
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-8 hover:text-[#017EC3]" id='header'>GENERATE INVOICE</h1>
 
 
-      <InvoiceForm inventory={inventory} onCreateInvoice={handleCreateInvoice} />
+      <InvoiceForm onCreateInvoice ={handleCreateInvoice} />
 
     {/*  <div className="mt-8">
         <h2 className="text-xl font-bold mb-4">Generated Invoices</h2>
